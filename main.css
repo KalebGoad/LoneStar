@@ -4,11 +4,12 @@ body {
     display: grid;
     gap: 1rem;
     padding: 1rem;
-    grid-template-rows: 250px auto 250px;
+    grid-template-rows: 160px auto 400px 160px;
     grid-template-areas:
         "header"
-        "main" "aside"
-        "footer ";
+        "main" 
+        "aside"
+        "footer";
     text-align: center;
     color: white;
     background-color: #5c76ea;
@@ -18,7 +19,7 @@ body {
 
 
 
-h1, h2, h3, h4 {
+h1, h2, h3 {
     text-align: center;
     color: #090909;
     margin: 10px;
@@ -26,11 +27,33 @@ h1, h2, h3, h4 {
     margin-top: 0px; */
 }
 
-ul, li {
-    text-align: center;
-    color: #090909;
-    margin: 10px;
-    margin-left: 0px;
+ul {
+    color: #f8f5f5;
+    /* margin: 10px;
+    margin-left: 0px; */
+    list-style-type:circle;
+    margin: auto;
+    /* padding: 0.5px; */
+    font-size: 16px;
+    max-width: 80%;
+    background-color: rgb(9, 0, 0);
+    border: 6px outset #022ff7;
+}
+
+.aside-inner-class {
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+ol {
+    align-content: center;
+    color: #f8f5f5;
+    margin: auto;
+    font-size: 24px;
+    max-width: fit-content;
+    background-color: rgb(9, 0, 0);
+    border: 8px outset #022ff7;
 }
 
 
@@ -42,7 +65,9 @@ header {
     background-color: white;
     border-style: ridge;
     border-color: #000001;
-    /* height: 200px; this is having no effect for some reason. solve this for the responsive part and move on from there where we can copy paste to the city format.*/
+    height: 150px;
+        /* Position fixed brings the header out alignment and overlaps other elements */
+  
 }
 
 .image {
@@ -61,7 +86,7 @@ header {
     transition-duration: .7s;
     margin-right: 10px;
     animation-name: lone;
-    font-size: large;
+    font-size: 30px;
     animation-duration: 6s;
     animation-iteration-count: infinite;
 }
@@ -82,21 +107,23 @@ header {
 
 .links {
     display: inline-block;
+    align-items: center;
     padding: 4px;
-    
+    margin: 4px;
+    margin-top: 16px;    
 }
 
 
 button {
-    transition-duration: .7s;
+    transition-duration: .4s;
     margin: 2px;
-    font-size: 20px;
+    font-size: 24px;
     background-color: #9dacf8;
-    font: rgb(232, 164, 164);
+    color:aliceblue;
 }
 
 button:hover {
-    transition-duration: .7s;
+    transition-duration: .4s;
     background-color:rgb(249, 110, 110);
     color:#090909;
     scale: 1.2;
@@ -104,16 +131,9 @@ button:hover {
     cursor:pointer;
 }
 
-@media (min-width: 600px) and (max-width:730px) {
-    
-    #texas {
-        font-size: 24px;
-    }
-    button {
-        font-size: 16px;
-        margin-bottom: 10px;
-    }
-}
+
+
+
 
 
 @media (min-width: 599px) {
@@ -132,15 +152,23 @@ button:hover {
             "aside main main"
             "footer footer footer";    
         }
-    header {
-        height: 100px;
-    }
+    
     #texas {
-        font-size: 24px;
+        font-size: 30px;
     }
     button {
-        font-size: 16px;
-        margin-bottom: 10px;
+        font-size: 24px;
+        /* margin-bottom: 10px; */
+    }
+    .links {
+        margin-top: 25px;
+    }
+
+}
+
+@media (min-width: 806px) {
+    header {
+        height: 100px;
     }
 }
 
@@ -150,6 +178,11 @@ button:hover {
     background-color: white;
     border-style: ridge;
     border-color: red;
+    position: relative;
+}
+
+.aside-inner-class {
+    position: absolute;
 }
 
 .main {
@@ -205,38 +238,17 @@ input  {
     grid-area: footer;
     border: 6px;
     background-color: white;
-
     border-style: ridge;
     border-color: black;
 }
 
-
-
-/* 
-#chips-el:hover {
-    color: #8a0803b6;
-    box-shadow: 0px 2px 0px 0px #222121, inset -1px -3px 6px 1px #515151;
-
+#web-link {
+    transition-duration: .4s;
+    color: #0101fc !important;
 }
 
-#chips-el:active {
-    color: #8a0803b6;
-    background-color: #ecb677ee;
-    box-shadow: 0px 0px 0px 0px #222121, inset -1px -3px 2px 1px #515151;
-
+#web-link:hover {
+    transition-duration: .4s;
+    font-size: 20px;
 }
 
-
-button {
-    color: #016f32;
-    cursor: pointer;
-    width: 150px;
-    background: rgb(0, 0, 0);
-    padding-top: 5px;
-    padding-bottom: 5px;
-    font-weight: bold;
-    border: none;
-    border-radius: 2px;
-    margin-top: 2px;
-    margin-bottom: 2px;
-} */
