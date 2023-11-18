@@ -4,17 +4,153 @@ body {
     display: grid;
     gap: 1rem;
     padding: 1rem;
-    grid-template-rows: 250px auto 250px;
+    grid-template-rows: 160px auto 400px 160px;
     grid-template-areas:
         "header"
-        "aside" "main"
-        "footer ";
+        "main" 
+        "aside"
+        "footer";
     text-align: center;
     color: white;
+    background-color: #003594;
     font-weight: bold;
 }
 
-@media (min-width: 600px) {
+
+h1, h2, h3 {
+    text-align: center;
+    color: #090909;
+    margin: 10px;
+}
+
+ul {
+    color: #003594;
+    list-style-type:circle;
+    margin: auto;
+    margin-bottom: 4px;
+    font-size: 30px;
+    max-width: 80%;
+    background-color: rgb(249, 249, 249);
+    border: 6px outset #070707;
+}
+
+.aside-inner-class {
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+ol {
+    align-content: center;
+    color: #003594;
+    margin: auto;
+    font-size: 24px;
+    max-width: fit-content;
+    background-color: rgb(249, 249, 249);
+    border: 8px outset #003594;
+}
+
+
+
+header {
+    grid-area: header;
+    border: 6px;
+    height: 100px;
+    background-color: white;
+    border-style: ridge;
+    border-color: #000001;
+    height: 150px;
+}
+
+.image {
+    display: none;
+    float: left;
+    margin: 4px;
+    width: 10%;
+    height: 80%;
+    border-radius: 10%;
+    border-color: blue;
+    border-width: 6px;
+    border-style: outset;
+}
+
+#texas {
+    transition-duration: .7s;
+    margin-right: 10px;
+    animation-name: lone;
+    font-size: 50px;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+
+
+@keyframes lone{
+    0% {color: red;}
+    25% {color: rgb(242, 122, 122)}
+    50% {color: rgb(122, 128, 236)}  
+    75% {color: rgb(0, 0, 255)} 
+    100% {color: #f43c3c}
+}
+
+#texas:hover {
+    color:#01136f;
+}
+
+.links {
+    display: inline-block;
+    align-items: center;
+    padding: 4px;
+    margin: 4px;
+    margin-top: 16px;    
+}
+
+
+
+button {
+    transition-duration: .4s;
+    margin: 2px;
+    font-size: 24px;
+    background-color: #9dacf8;
+    color:aliceblue;
+}
+
+button:hover {
+    transition-duration: .4s;
+    background-color:rgb(249, 110, 110);
+    color:#090909;
+    scale: 1.1;
+    margin: 4px;
+    cursor:pointer;
+}
+
+#main-page {
+    transition-duration: .4s;
+    display: inline-block;    
+    margin: 8px;
+    margin-left: 0px;
+    margin-top: 24px; 
+    font-size: 22px;
+    background-color:rgb(250, 90, 90);
+    color:rgb(10, 10, 10);
+}
+
+#main-page:hover {
+    transition-duration: .4s;
+    background-color:rgb(117, 249, 110);
+    color:#090909;
+    scale: 1.1;
+    margin: 4px;
+    cursor:pointer;
+}
+
+
+@media (min-width: 599px) {
+    
+    .image {
+        display: block;
+    }
+
     body {
             grid-template-columns: minmax(auto, 250px) 
             minmax(250px, 1fr) 
@@ -25,83 +161,102 @@ body {
             "aside main main"
             "footer footer footer";    
         }
+    
+    #texas {
+        font-size: 30px;
+    }
+    button {
+        font-size: 24px;
+    }
+    .links {
+        margin-top: 25px;
+    }
+
 }
 
-
-
-.header {
-    grid-area: header;
-    /* height: 80px; */
-    background-color: #69ca95;
-}
-
-.image {
-    float: left;
-    width: 10%;
-    height: 100%;
-    border-radius: 40%;
-    border-color: red;
-    border-width: 6px;
-    border-style: outset;
+@media (min-width: 806px) {
+    header {
+        height: 100px;
+    }
 }
 
 .aside {
     grid-area: aside;
-    background-color: #8596e6;
+    border: 6px;
+    background-color: white;
+    border-style: ridge;
+    border-color: black;
+    position: relative;
+}
+
+.aside-inner-class {
+    position: absolute;
 }
 
 .main {
     grid-area: main;
-    background-color: rgb(227, 149, 101);
+    background-color: white;
+    border: 6px;
+    color: black;
+    border-style: ridge;
+    border-color: black;
+    align-content: center;
 }
 
 table, th, td {
+    margin: auto;   
+    width: 80%;
     border: 2px solid black;
 }
 
 #top_row {
-    background-color: #01136f;
+    background-color: #000001;
+    color: rgb(244, 238, 238);
     width: 100%;
 }
 
+#myForm {
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(230, 44, 44);
+    border-radius: 10%;
+    border: 8px double rgb(11, 10, 10);
+
+}
+
+label {
+    display: block; 
+    color: #f6f1f1; 
+    margin: auto;
+    margin-top: 10px;
+}
+
+input  {
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+
 .footer {
     grid-area: footer;
-    background-color: #016f03;
+    border: 6px;
+    background-color: white;
+    border-style: ridge;
+    border-color: black;
 }
 
-h1 {
-    text-align: center;
-    color: #090909;
-    /* margin-bottom: 0px;
-    margin-top: 0px; */
+#web-link {
+    transition-duration: .4s;
+    color: #0101fc !important;
 }
 
-
-/* 
-#chips-el:hover {
-    color: #8a0803b6;
-    box-shadow: 0px 2px 0px 0px #222121, inset -1px -3px 6px 1px #515151;
-
+#web-link:hover {
+    transition-duration: .4s;
+    font-size: 18px;
 }
 
-#chips-el:active {
-    color: #8a0803b6;
-    background-color: #ecb677ee;
-    box-shadow: 0px 0px 0px 0px #222121, inset -1px -3px 2px 1px #515151;
-
-}
-
-
-button {
-    color: #016f32;
-    cursor: pointer;
-    width: 150px;
-    background: rgb(0, 0, 0);
-    padding-top: 5px;
-    padding-bottom: 5px;
-    font-weight: bold;
-    border: none;
-    border-radius: 2px;
-    margin-top: 2px;
-    margin-bottom: 2px;
-} */

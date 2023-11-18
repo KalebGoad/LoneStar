@@ -2,48 +2,72 @@
 <html>
     <head>
         <meta charset='utf-8'>
-        
-        <title>San Antonio</title>
+        <title>Lone Star</title>
         <meta name='viewport' content='width=device-width, initial-scale=1'>
-        <link rel='stylesheet' type='text/css' href='main.css'>
+        <link rel='stylesheet' type='text/css' href='sanAn.css'>
         
     </head>
     <body>
         <header class="header">
-            <img src="/lone_star_project/assets/state_outline.png" alt="Lone Star" class="image">
-            <h1>Lone Star</h1>
+            <img src="/LoneStar/assets/spurs.png" alt="San Antonio Spurs" class="image">
+            <span class="header_nav">
+                <h1 class="links">
+                    <strong id="texas">San Antonio</strong>
+                </h1>
+                <a href="/LoneStar/main.html">
+                    <button id="main-page">Main Page</button>
+                </a>
+                    <h2 class="links">
+                        <a href="/LoneStar/dallas.html">
+                            <button>Dallas</button>
+                        </a>
+                    </h2>
+                    <h2 class="links">
+                        <a href="/LoneStar/houston.html">
+                            <button>Houston</button>
+                        </a>
+                    </h2>
+            </span>
         </header>
         
         <aside class="aside">
-            <h1>aside</h1>
+            <h1>Popular Tourist Attractions</h1>
+                <h3>
+                    <a href="https://www.tripadvisor.com/Attractions-g60956-Activities-San_Antonio_Texas.html" target="_blank" id="web-link">Information from Trip Advisor</a>
+                </h3>
+                <ol>
+                    <li>San Antonio River Walk</li>
+                    <li>The Alamo</li>
+                    <li>Natural Bridge Caverns</li>
+                    <li>Mission San Jose</li>
+                    <li>Japanese Tea Gardens</li>
+                </ol>
         </aside>
         
         <main class="main">
-            <h1>main</h1>
-                <table>
-                    <tr id="top_row">
-                        <th>Company</th>
-                        <th>Contact</th>
-                        <th>Country</th>
-                    </tr>
-                    <!-- Keep the use of id going with the table to satisfy that part -->
-                    <tr>
-                        <td>Alfreds Futterkiste</td>
-                        <td>Maria Anders</td>
-                        <td>Germany</td>
-                    </tr>
-                    <tr>
-                        <td>Centro comercial Moctezuma</td>
-                        <td>Francisco Chang</td>
-                        <td>Mexico</td>
-                    </tr>
-                </table>
+            <h1>City Information</h1>
+
+                <div>
+                    <a href="https://www.texas-demographics.com/san-antonio-demographics" target="_blank" id="web-link"><h3>Information from Texas Demographics</h3></a>
+                </div>
+
+                <div>
+                    <ul>
+                        <li>Population: Approximately 1.5 Million</li>
+                        <li>Founded in 1718</li>
+                        <li>Located in South Texas</li>
+                        <li>Average Income: $58,829</li>
+                        <li>Income level is approximately 20% less than the State average of $72,284</li>
+
+                    </ul>
+                </div>
         </main>
 
         <footer class="footer">
-            <h1>footer</h1>
+            <h2>Developed by Kaleb Goad</h2>
+            <h3>Contact: goad.kaleb@gmail.com</h3>
         </footer>
         
-        <script src="sanAn.js"></script> 
+        <script src="main.js"></script> 
     </body>
 </html>
