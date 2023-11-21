@@ -78,7 +78,7 @@ header {
     transition-duration: .7s;
     margin-right: 10px;
     animation-name: lone;
-    font-size: 30px;
+    font-size: 50px;
     animation-duration: 6s;
     animation-iteration-count: infinite;
 }
