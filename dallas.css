@@ -144,6 +144,31 @@ button:hover {
     cursor:pointer;
 }
 
+@media (max-width: 500px) {
+
+    #texas {
+        font-size: 30px;
+    }
+
+    #main-page {
+        margin-top: 12px;
+        font-size: 18px;
+    }
+
+    button {
+        font-size: 18px;
+    }
+
+    ul {
+        font-size: 16px;
+    }
+
+    ol {
+        font-size: 20px;
+    }
+    
+}
+
 
 @media (min-width: 599px) {
     

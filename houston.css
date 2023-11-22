@@ -145,6 +145,27 @@ button:hover {
 }
 
 
+@media (max-width: 500px) {
+
+    #texas {
+        font-size: 30px;
+    }
+
+    #main-page {
+        margin-top: 12px;
+        font-size: 18px;
+    }
+    
+    button {
+        font-size: 18px;
+    }
+
+    ul {
+        font-size: 16px;
+    }
+    
+}
+
 @media (min-width: 599px) {
     
     .image {
